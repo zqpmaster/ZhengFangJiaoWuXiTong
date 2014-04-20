@@ -1,0 +1,39 @@
+
+/* Class = "IBUIButton"; normalTitle = "登陆"; ObjectID = "2bO-1j-Ua4"; */
+"2bO-1j-Ua4.normalTitle" = "登陆";
+
+/* Class = "IBUINavigationItem"; title = "分数"; ObjectID = "BgQ-at-CV9"; */
+"BgQ-at-CV9.title" = "分数";
+
+/* Class = "IBUILabel"; text = "分数"; ObjectID = "GAb-Vh-ypW"; */
+"GAb-Vh-ypW.text" = "分数";
+
+/* Class = "IBUILabel"; text = "验证码"; ObjectID = "MZI-hP-lVL"; */
+"MZI-hP-lVL.text" = "验证码";
+
+/* Class = "IBUIButton"; normalTitle = "课表成绩"; ObjectID = "NUL-U9-bYe"; */
+"NUL-U9-bYe.normalTitle" = "课表成绩";
+
+/* Class = "IBUINavigationItem"; title = "课表"; ObjectID = "RYL-8I-Oil"; */
+"RYL-8I-Oil.title" = "课表";
+
+/* Class = "IBUILabel"; text = "课表"; ObjectID = "Taz-P4-IVa"; */
+"Taz-P4-IVa.text" = "课表";
+
+/* Class = "IBUIButton"; normalTitle = "刷新"; ObjectID = "ZwF-Te-F9R"; */
+"ZwF-Te-F9R.normalTitle" = "刷新";
+
+/* Class = "IBUITextView"; text = "登陆成功后返回的html"; ObjectID = "amj-Mv-Ybm"; */
+"amj-Mv-Ybm.text" = "登陆成功后返回的html";
+
+/* Class = "IBUINavigationItem"; title = "登陆"; ObjectID = "ghF-13-rjS"; */
+"ghF-13-rjS.title" = "登陆";
+
+/* Class = "IBUILabel"; text = "密码"; ObjectID = "n89-XL-zA0"; */
+"n89-XL-zA0.text" = "密码";
+
+/* Class = "IBUILabel"; text = "学号"; ObjectID = "nXg-dP-1Jd"; */
+"nXg-dP-1Jd.text" = "学号";
+
+/* Class = "IBUINavigationItem"; title = "选择"; ObjectID = "qSn-uu-bn8"; */
+"qSn-uu-bn8.title" = "选择";

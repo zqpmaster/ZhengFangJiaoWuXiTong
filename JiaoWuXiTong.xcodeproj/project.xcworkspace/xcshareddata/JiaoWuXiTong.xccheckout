@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3F6F5A4E-4F0D-4AD2-BCD3-6098BFFADBEA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JiaoWuXiTong</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2C0AD577-5F76-4CF6-A9B2-5F8B193446F9</key>
+		<string>http://git.oschina.net/zqpmaster/BjutHelper.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JiaoWuXiTong.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2C0AD577-5F76-4CF6-A9B2-5F8B193446F9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://git.oschina.net/zqpmaster/BjutHelper.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2C0AD577-5F76-4CF6-A9B2-5F8B193446F9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2C0AD577-5F76-4CF6-A9B2-5F8B193446F9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JiaoWuXiTong</string>
+		</dict>
+	</array>
+</dict>
+</plist>
