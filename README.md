@@ -25,7 +25,7 @@
 首先是获取Cookie，这个用 NSURLRequest就能获取到，之后要在每次请求的时候加到 NSMutableURLRequest 里。AFnetworking在每次请求的时候都会建立一个NSURLRequest对象，改这个就可以。代码如下
 获取cookie
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"
-http://gdjwgl.bjut.edu.cn/default2.aspx
+http://学校的网址/default2.aspx
 "]];
                                               //  cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
                                             //timeoutInterval:3];
