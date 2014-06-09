@@ -14,17 +14,19 @@
                  NSString *transStr=[[NSString alloc]initWithData:data encoding:enc];</code></pre>
 光转码也不行，在分析HTML的时候因为网页头部的编码信息也有问题，所以要做手动修改，这样才能被TFhepple解
 析。
+<pre><code> 
  NSString *utf8HtmlStr = [transStr stringByReplacingOccurrencesOfString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\">" withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];
               NSData *htmlDataUTF8 = [utf8HtmlStr dataUsingEncoding:NSUTF8StringEncoding];
-              TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:htmlDataUTF8];
+              TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:htmlDataUTF8];</code></pre> 
 成绩页面修改的方式有所不同
-              NSString *utf8HtmlStr = [transStr stringByReplacingOccurrencesOfString:@"<meta content=\"text/html; charset=gb2312\" http-equiv=\"Content-Type\">" withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];
+        <pre><code>  NSString *utf8HtmlStr = [transStr stringByReplacingOccurrencesOfString:@"<meta content=\"text/html; charset=gb2312\" http-equiv=\"Content-Type\">" withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];</code></pre>
 
 其他页面要怎么替换具体要看页面头部具体的信息是什么，然后写在 stringByReplacingOccurrencesOfString方法第一个参数部分就可以。
 
 模拟登陆部分
 首先是获取Cookie，这个用 NSURLRequest就能获取到，之后要在每次请求的时候加到 NSMutableURLRequest 里。AFnetworking在每次请求的时候都会建立一个NSURLRequest对象，改这个就可以。代码如下
 获取cookie
+<pre><code> 
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"
 http://学校的网址/default2.aspx
 "]];
@@ -38,9 +40,9 @@ http://学校的网址/default2.aspx
        NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
        NSArray *cookies =[cookieJar cookies];
        _cookieDictionary= [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
-
+</code></pre> 
 每次post或者get带上登陆成功后保存下来的cookie 获取验证码的时候同样
-
+<pre><code> 
 - (AFHTTPRequestOperation *)POST:(NSString *)URLString
                       parameters:(NSDictionary *)parameters
                          success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
@@ -51,6 +53,7 @@ http://学校的网址/default2.aspx
     if(self.cookieDictionary) {
         [request setHTTPShouldHandleCookies:NO];
         [request setAllHTTPHeaderFields:self.cookieDictionary];
+</code></pre> 
 
 
 模拟登陆提交的参数有 用户名,密码，验证码还有一个viewstate，这个viewstate每次都得在登陆前获取验证码图片的时候同时获取 还是通过GET请求得到页面通过html分析工具得到对应的viwestate，具体可以看我的DEMO.然后在提交参数的时候一并提交。
@@ -58,6 +61,7 @@ NSDictionary *parameters = @{@"__VIEWSTATE":self.viewState,@"txtUserName"self.xu
 
 登陆成功之后就可以用cookie随意访问各个页面了。。不过在请求查询成绩页面的时候还要提交一个viewState,这个viewState参数是从登陆成功后的第一个页面获取，非常长。。。。。
 并且在访问内部所有页面的时候都要在Request Header里加一个refer参数，这个参数跟提交cookie是一样的道理，学校的系统这个东西不提交不行，但是随便提交一个同学的页面地址居然就可以了。
+<pre><code> 
    if(self.cookieDictionary) {
         
         NSMutableDictionary*newDictionary=[self.cookieDictionary mutableCopy];
@@ -66,5 +70,6 @@ NSDictionary *parameters = @{@"__VIEWSTATE":self.viewState,@"txtUserName"self.xu
         [request setAllHTTPHeaderFields:newDictionary];
         
     }
-    
+</code></pre> 
+
 这部分也是加在AFHTTPRequestOperationManager类里实现文件post 和get 方法底下的。
