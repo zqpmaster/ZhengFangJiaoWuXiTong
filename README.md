@@ -56,9 +56,11 @@ http://学校的网址/default2.aspx
 </code></pre> 
 
 
-模拟登陆提交的参数有 用户名,密码，验证码还有一个viewstate，这个viewstate每次都得在登陆前获取验证码图片的时候同时获取 还是通过GET请求得到页面通过html分析工具得到对应的viwestate，具体可以看我的DEMO.然后在提交参数的时候一并提交。
+模拟登陆提交的参数有 用户名,密码，验证码还有一个viewstate，这个viewstate每次都得在登陆前获取验证码图片的时候同时获取 还是通过GET请求得到页面通过html分析工具得到对应的viwestate，具体可以看我的DEMO.然后在提交参数的时候一并提
+交。
+<pre><code> 
 NSDictionary *parameters = @{@"__VIEWSTATE":self.viewState,@"txtUserName"self.xueHao.text,@"TextBox2":self.miMa.text,@"txtSecretCode":self.yanZhengMa.text,@"RadioButtonList1":@"学生",@"Button1":@""};
-
+</code></pre> 
 登陆成功之后就可以用cookie随意访问各个页面了。。不过在请求查询成绩页面的时候还要提交一个viewState,这个viewState参数是从登陆成功后的第一个页面获取，非常长。。。。。
 并且在访问内部所有页面的时候都要在Request Header里加一个refer参数，这个参数跟提交cookie是一样的道理，学校的系统这个东西不提交不行，但是随便提交一个同学的页面地址居然就可以了。
 <pre><code> 
