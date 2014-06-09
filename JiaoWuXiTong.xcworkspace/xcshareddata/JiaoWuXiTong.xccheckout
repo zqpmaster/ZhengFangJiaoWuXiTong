@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6B530344-8F6C-4988-B28A-8A2422C2B6ED</string>
+	<string>C052AEC7-A6D7-4832-9C79-3C95DBA68344</string>
 	<key>IDESourceControlProjectName</key>
 	<string>JiaoWuXiTong</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2C0AD577-5F76-4CF6-A9B2-5F8B193446F9</key>
-		<string>http://git.oschina.net/zqpmaster/BjutHelper.git</string>
+		<key>DD5118C2-650B-41D3-84D6-0689ADFB7B8C</key>
+		<string>https://github.com/zqpmaster/FangZhengJiaoWU.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>JiaoWuXiTong.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2C0AD577-5F76-4CF6-A9B2-5F8B193446F9</key>
+		<key>DD5118C2-650B-41D3-84D6-0689ADFB7B8C</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://git.oschina.net/zqpmaster/BjutHelper.git</string>
+	<string>https://github.com/zqpmaster/FangZhengJiaoWU.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2C0AD577-5F76-4CF6-A9B2-5F8B193446F9</string>
+	<string>DD5118C2-650B-41D3-84D6-0689ADFB7B8C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2C0AD577-5F76-4CF6-A9B2-5F8B193446F9</string>
+			<string>DD5118C2-650B-41D3-84D6-0689ADFB7B8C</string>
 			<key>IDESourceControlWCCName</key>
-			<string>JiaoWuXiTong</string>
+			<string>FangZhengJiaoWU</string>
 		</dict>
 	</array>
 </dict>

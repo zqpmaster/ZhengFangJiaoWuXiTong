@@ -69,7 +69,12 @@
                      //                  NSLog(@"数据：%d",operation.response.statusCode);
                      NSURL *urlLinshi=operation.request.URL;
                      self.urlScore=urlLinshi.absoluteString;
-                     NSString *utf8HtmlStr = [operation.responseString stringByReplacingOccurrencesOfString:@"<meta content=\"text/html; charset=gb2312\" http-equiv=\"Content-Type\">" withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];
+                     NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding (kCFStringEncodingGB_18030_2000);
+                     
+                     NSData *data=responseObject;
+                     NSString *transStr=[[NSString alloc]initWithData:data encoding:enc];
+                     
+                     NSString *utf8HtmlStr = [transStr stringByReplacingOccurrencesOfString:@"<meta content=\"text/html; charset=gb2312\" http-equiv=\"Content-Type\">" withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];
                      NSData *htmlDataUTF8 = [utf8HtmlStr dataUsingEncoding:NSUTF8StringEncoding];
                      TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:htmlDataUTF8];
                      //                  NSArray *elements  = [xpathParser searchWithXPathQuery:@"//table[@class='datelist']/tr[2]/td"];
@@ -105,8 +110,13 @@
         NSDictionary *parameters = @{@"__VIEWSTATE":self.viewState,@"ddlXN":@"",@"ddlXQ":@"",@"ddl_kcxz":@"",@"btn_zcj": @"历年成绩"};
         [manager POST:self.urlScore parameters:parameters
               success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                  NSLog(@"biaodantijiaochenggong:%ld，%@",(long)operation.response.statusCode,operation.responseString);//提交表单
-                  NSString *utf8HtmlStr = [operation.responseString stringByReplacingOccurrencesOfString:@"<meta content=\"text/html; charset=gb2312\" http-equiv=\"Content-Type\">" withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];
+                  NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding (kCFStringEncodingGB_18030_2000);
+                  
+                  NSData *data=responseObject;
+                  NSString *transStr=[[NSString alloc]initWithData:data encoding:enc];
+                  
+                  NSLog(@"biaodantijiaochenggong:%ld，%@",(long)operation.response.statusCode,transStr);//提交表单
+                  NSString *utf8HtmlStr = [transStr stringByReplacingOccurrencesOfString:@"<meta content=\"text/html; charset=gb2312\" http-equiv=\"Content-Type\">" withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];
                   NSData *htmlDataUTF8 = [utf8HtmlStr dataUsingEncoding:NSUTF8StringEncoding];
                   [self arrangeData:htmlDataUTF8];
               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

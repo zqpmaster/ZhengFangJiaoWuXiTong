@@ -44,10 +44,15 @@
     NSDictionary *parameters2 = @{@"xh":zhangHao,@"xm":uName,@"gnmkdm":@"N121603"};
     [manager2 GET:@"http://172.21.96.64/xskbcx.aspx?xh=11024132&xm=%D5%C5%C8%AB%C5%F4&gnmkdm=N121603" parameters:parameters2
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding (kCFStringEncodingGB_18030_2000);
+              
+              NSData *data=responseObject;
+              NSString *transStr=[[NSString alloc]initWithData:data encoding:enc];
+              
               NSLog(@"huoqushuju: %ld",(long)operation.response.statusCode);
-              NSLog(@"数据：%@",operation.responseString);
-              self.keBiao.text=operation.responseString;
-              NSString *utf8HtmlStr = [operation.responseString stringByReplacingOccurrencesOfString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\">" withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];
+              NSLog(@"数据：%@",transStr);
+              self.keBiao.text=transStr;
+              NSString *utf8HtmlStr = [transStr stringByReplacingOccurrencesOfString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\">" withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];
               NSData *htmlDataUTF8 = [utf8HtmlStr dataUsingEncoding:NSUTF8StringEncoding];
               TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:htmlDataUTF8];
               NSArray *elements  = [xpathParser searchWithXPathQuery:@"//table[@id='Table1']/tr/td/child::text()"];
@@ -60,9 +65,9 @@
               TFHppleElement *element = [elements objectAtIndex:i];
               
               // Get the text within the cell tag
-              NSString *content = [element text];
+//              NSString *content = [element text];
               NSString *ta=[element tagName];
-                  NSDictionary *dic=[element attributes];
+//                  NSDictionary *dic=[element attributes];
                   NSString *nodeContent=[element content];
               NSLog(@"课程为%@%@",nodeContent,ta);
                   [allContents addObject:nodeContent];

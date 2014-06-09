@@ -39,7 +39,6 @@
 //    manager2.requestSerializer.stringEncoding = enc;
     //
     
-    //          NSDictionary *parameters2 = @{@"xh":@"11024132",@"xm":@"张全鹏",@"gnmkdm":@"N121603"};
     [manager2 GET:@"http://172.21.96.64/xscjcx.aspx?xh=11024132&xm=%D5%C5%C8%AB%C5%F4&gnmkdm=N121605" parameters:nil
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
 //              NSLog(@"huoqushuju: %ld",(long)operation.response.statusCode);
@@ -58,7 +57,7 @@
                   
                   // Get the text within the cell tag
                   NSString *content = [element text];
-                  NSString *ta=[element tagName];
+//                  NSString *ta=[element tagName];
                   NSLog(@"未通过成绩为%@",content);
               }
 

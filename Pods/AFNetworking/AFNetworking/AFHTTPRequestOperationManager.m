@@ -293,7 +293,7 @@ static AFHTTPRequestOperationManager *_shareManage;
 
 -(NSDictionary*)cookieDictionary{
    if (!_cookieDictionary) {
-       NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://172.21.96.63/default2.aspx"]];
+       NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://gdjwgl.bjut.edu.cn/default2.aspx"]];
                                               //  cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
                                             //timeoutInterval:3];
        
