@@ -2,12 +2,13 @@
 正方教务系统IOS客户端数据请求DEMO
 
 用到的几个工具
-1 chrome的开发者工具   查看每次HTTP请求命令与参数之类的。 <br />
-2 AFnetworking    ios网络请求开源框架，同样的有ASIhttprequest。  <br /> 选择AFnetworking是因为它更简单，并且现在还在更新维护，ASI好像好久不更新了。
-3 TFhepple    Html分析类库。  <br />
+* chrome的开发者工具   查看每次HTTP请求命令与参数之类的。
+* AFnetworking    ios网络请求开源框架，同样的有ASIhttprequest。选择AFnetworking是因为它更简单，并且现在还在更新维护，ASI好像好久不更新了。
+* TFhepple    Html分析类库。
 学校的正方教务因为没有对应的JSON数据接口，所以只能模拟网页的所有行为，获取HTML 分析html。
-系统用的编码是GB2312 框架获取下来的字符串虽然会自动解码，但是很不稳定，有时候会得到空字符串，但是获取下来的DATA就没有这个问题，所以就要手动解码将DATA转为NSString。<br />
- <pre><code>    cess:^(AFHTTPRequestOperation *operation, id responseObject) {
+系统用的编码是GB2312 框架获取下来的字符串虽然会自动解码，但是很不稳定，有时候会得到空字符串，但是获取下来的DATA就没有这个问题，所以就要手动解码将DATA转为NSString。
+
+ <pre><code>cess:^(AFHTTPRequestOperation *operation, id responseObject) {
                  NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding (kCFStringEncodingGB_18030_2000);
                  
                  NSData *data=responseObject;
