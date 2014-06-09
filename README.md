@@ -7,12 +7,13 @@
  3. TFhepple    Html分析类库。
 学校的正方教务因为没有对应的JSON数据接口，所以只能模拟网页的所有行为，获取HTML 分析html。
 系统用的编码是GB2312 框架获取下来的字符串虽然会自动解码，但是很不稳定，有时候会得到空字符串，但是获取下来的DATA就没有这个问题，所以就要手动解码将DATA转为NSString。。
-                 cess:^(AFHTTPRequestOperation *operation, id responseObject) {
+ <pre><code>    cess:^(AFHTTPRequestOperation *operation, id responseObject) {
                  NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding (kCFStringEncodingGB_18030_2000);
                  
                  NSData *data=responseObject;
-                 NSString *transStr=[[NSString alloc]initWithData:data encoding:enc];
-光转码也不行，在分析HTML的时候因为网页头部的编码信息也有问题，所以要做手动修改，这样才能被TFhepple解析。
+                 NSString *transStr=[[NSString alloc]initWithData:data encoding:enc];</code></pre>
+光转码也不行，在分析HTML的时候因为网页头部的编码信息也有问题，所以要做手动修改，这样才能被TFhepple解
+析。
  NSString *utf8HtmlStr = [transStr stringByReplacingOccurrencesOfString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\">" withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];
               NSData *htmlDataUTF8 = [utf8HtmlStr dataUsingEncoding:NSUTF8StringEncoding];
               TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:htmlDataUTF8];
