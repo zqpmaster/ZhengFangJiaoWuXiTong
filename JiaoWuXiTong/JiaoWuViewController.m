@@ -33,72 +33,9 @@
 @synthesize viewState;
 - (void)viewDidLoad
 {
-    dispatch_queue_t queue = dispatch_queue_create("queue", NULL);
-    dispatch_async(queue, ^{
 //        [self acquireViewStare];
         [self shuaXinYanZhengMa];
-    });
     }
-//-(void)viewDidAppear:(BOOL)animated{
-//    AFNetworkReachabilityManager *man=[AFNetworkReachabilityManager sharedManager];
-//    if (man.reachable) {
-//        NSLog(@"网络是否能连接");
-//    }else{
-//        NSLog(@"无网络连接");
-//    }
-//    NSMutableURLRequest *UrlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: @"http://172.21.96.64/CheckCode.aspx"]];
-//    //    [self.AFHROM huoQuCookie];
-//    //    NSEnumerator * enumeratorValue = [self.AFHROM.cookieDictionary objectEnumerator];
-//    //    //快速枚举遍历所有Value和Key
-//    //    NSLog(@"Cookie输出开始");
-//    //
-//    //    for (NSObject *object in enumeratorValue) {
-//    //        NSLog(@"遍历Value的值: %@",object);
-//    //    }
-//    //    NSEnumerator * enumeratorKey = [self.AFHROM.cookieDictionary keyEnumerator];
-//    //
-//    //    for (NSObject *object in enumeratorKey) {
-//    //        NSLog(@"遍历KEY的值: %@",object);
-//    //    }
-//    //
-//    //提交Cookie，上一行的NSURLRequest被改为NSMutableURLReques
-//    
-//    if(self.AFHROM.cookieDictionary) {
-//        //输出cookie
-//        //        NSEnumerator * enumeratorValue = [self.AFHROM.cookieDictionary objectEnumerator];
-//        //        //快速枚举遍历所有Value和Key
-//        //        NSLog(@"Cookie输出开始");
-//        //
-//        //        for (NSObject *object in enumeratorValue) {
-//        //            NSLog(@"遍历Value的值: %@",object);
-//        //        }
-//        //        NSEnumerator * enumeratorKey = [self.AFHROM.cookieDictionary keyEnumerator];
-//        //
-//        //        for (NSObject *object in enumeratorKey) {
-//        //            NSLog(@"遍历KEY的值: %@",object);
-//        //        }
-//        //
-//        [UrlRequest setHTTPShouldHandleCookies:NO];
-//        [UrlRequest setAllHTTPHeaderFields: self.AFHROM.cookieDictionary];
-//    }
-//    
-//    //end
-//    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:UrlRequest];
-//    requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
-//    [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        if (operation.response.statusCode==200) {
-//            NSLog(@"Response: %@", responseObject);
-//            self.yanZhengMaImageView.image = responseObject;
-//        }else
-//            NSLog(@"加载验证码失败");
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"Image error: %@", error);
-//    }];
-//    [requestOperation start];
-//	// 显示验证码
-//
-//}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -110,9 +47,8 @@
     [sender resignFirstResponder];
 }
 - (IBAction)shuaXinYanZhengMaImageView:(id)sender {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self shuaXinYanZhengMa];
-    });
+
 }
 -(void)acquireViewStare{
     [self.AFHROM GET:@"http://172.21.96.64/default2.aspx" parameters:nil
@@ -134,7 +70,7 @@
               self.viewState=[element objectForKey:@"value"];
 //                  [self huoDevs];
                   NSLog(@"1提取到得viewstate为%@",self.viewState);
-                  [self logins];
+                  [self loginMet];
 
 
               }
@@ -146,13 +82,8 @@
     NSLog(@"2提取到得viewstate为%@",self.viewState);
 
 }
-//-(void)huoDevs{
-//    self.viewState=viewstates;
-//    NSLog(@"3提取到得viewstate为%@",self.viewState);
-//
-//
-//}
 -(void)shuaXinYanZhengMa{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     NSMutableURLRequest *UrlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: @"http://172.21.96.64/CheckCode.aspx"]];
     //提交Cookie，上一行的NSURLRequest被改为NSMutableURLRequest
     
@@ -175,6 +106,7 @@
     }];
     [requestOperation start];
     // 显示验证码
+    });
 
 }
 
@@ -188,11 +120,11 @@
     }else{
         NSLog(@"有state%@直接登录",self.viewState);
         dispatch_async(only, ^{
-            [self logins];
+            [self loginMet];
         });
     }
 }
--(void)logins{
+-(void)loginMet{
 //    [self acquireViewStare];
 //
 //    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
