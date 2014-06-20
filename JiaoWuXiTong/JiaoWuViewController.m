@@ -39,7 +39,7 @@
         [self shuaXinYanZhengMa];
     });
     }
--(void)viewDidAppear:(BOOL)animated{
+//-(void)viewDidAppear:(BOOL)animated{
 //    AFNetworkReachabilityManager *man=[AFNetworkReachabilityManager sharedManager];
 //    if (man.reachable) {
 //        NSLog(@"网络是否能连接");
@@ -97,7 +97,7 @@
 //    [requestOperation start];
 //	// 显示验证码
 //
-}
+//}
 
 - (void)didReceiveMemoryWarning
 {
