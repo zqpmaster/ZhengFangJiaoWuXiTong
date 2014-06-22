@@ -48,8 +48,8 @@
                      TFHppleElement *element = [elements objectAtIndex:i];
                      tempSelf.viewState=[element objectForKey:@"value"];
                      //                  [self huoDevs];
-                     NSLog(@"1提取到得viewstate为%@",self.viewState);
-                     [self loginMet];
+                     NSLog(@"1提取到得viewstate为%@",tempSelf.viewState);
+                     [tempSelf loginMet];
                      
                      
                  }
