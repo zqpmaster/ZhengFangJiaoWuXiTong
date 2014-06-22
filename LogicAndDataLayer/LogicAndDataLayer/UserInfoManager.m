@@ -19,7 +19,6 @@ static UserInfoManager *_shareManageVar;
         });
     }
     return _shareManageVar;
-    //    return [[[self class] alloc] initWithBaseURL:nil];
 }
 
 @end

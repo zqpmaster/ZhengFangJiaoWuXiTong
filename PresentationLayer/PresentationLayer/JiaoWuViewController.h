@@ -10,5 +10,7 @@
 
 @interface JiaoWuViewController : UIViewController{
 }
+
 - (IBAction)TextField_DidEndOnExit:(id)sender;
+
 @end

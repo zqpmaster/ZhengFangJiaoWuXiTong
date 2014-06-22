@@ -163,7 +163,7 @@
                                                             jidian:[self.chengJiCache objectAtIndex:7+i*15]
                                                          attribute:[self.chengJiCache objectAtIndex:4+i*15]
                                                             number:[self.chengJiCache objectAtIndex:2+i*15]
-                                                           teacher:@"刘际洪"
+                                                           teacher:@"......"
                                                               year:[self.chengJiCache objectAtIndex:0+i*15]
                                                               term:[self.chengJiCache objectAtIndex:1+i*15]
                                                             xueFen:[self.chengJiCache objectAtIndex:6+i*15]

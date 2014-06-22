@@ -13,7 +13,6 @@
 		277F62FE1956DACE00ADD3DD /* libLogicAndDataLayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 277F62E61956DACE00ADD3DD /* libLogicAndDataLayer.a */; };
 		277F63041956DACE00ADD3DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 277F63021956DACE00ADD3DD /* InfoPlist.strings */; };
 		277F63061956DACE00ADD3DD /* LogicAndDataLayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F63051956DACE00ADD3DD /* LogicAndDataLayerTests.m */; };
-		277F63121956DBF800ADD3DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 277F63111956DBF800ADD3DD /* libPods.a */; };
 		277F634C1956DE7200ADD3DD /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F63471956DE7200ADD3DD /* TFHpple.m */; };
 		277F634D1956DE7200ADD3DD /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F63491956DE7200ADD3DD /* TFHppleElement.m */; };
 		277F634E1956DE7200ADD3DD /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F634B1956DE7200ADD3DD /* XPathQuery.m */; };
@@ -25,7 +24,6 @@
 		277F635C1956E5FD00ADD3DD /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F635B1956E5FD00ADD3DD /* UserInfoManager.m */; };
 		277F635D1956E5FD00ADD3DD /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F635B1956E5FD00ADD3DD /* UserInfoManager.m */; };
 		277F635E1956E6D900ADD3DD /* UserInfoManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 277F635A1956E5FD00ADD3DD /* UserInfoManager.h */; };
-		277F63601956E81A00ADD3DD /* libPods-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 277F635F1956E81A00ADD3DD /* libPods-AFNetworking.a */; };
 		277F636E1956EC5800ADD3DD /* CalDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F63661956EC5800ADD3DD /* CalDataController.m */; };
 		277F636F1956EC5800ADD3DD /* CalDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F63661956EC5800ADD3DD /* CalDataController.m */; };
 		277F63701956EC5800ADD3DD /* CalDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F63681956EC5800ADD3DD /* CalDataModel.m */; };
@@ -38,6 +36,8 @@
 		277F63771956EC7800ADD3DD /* CalDataModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 277F63671956EC5800ADD3DD /* CalDataModel.h */; };
 		277F63781956EC7800ADD3DD /* DataModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 277F636A1956EC5800ADD3DD /* DataModel.h */; };
 		277F63791956EC7800ADD3DD /* DataModelController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 277F636C1956EC5800ADD3DD /* DataModelController.h */; };
+		27E131251956F1B90051B744 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E131241956F1B90051B744 /* libPods.a */; };
+		27E131281956F20C0051B744 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E131271956F20C0051B744 /* Login.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +100,9 @@
 		277F636B1956EC5800ADD3DD /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 		277F636C1956EC5800ADD3DD /* DataModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModelController.h; sourceTree = "<group>"; };
 		277F636D1956EC5800ADD3DD /* DataModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModelController.m; sourceTree = "<group>"; };
+		27E131241956F1B90051B744 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "../Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		27E131261956F20C0051B744 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
+		27E131271956F20C0051B744 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +110,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				277F63601956E81A00ADD3DD /* libPods-AFNetworking.a in Frameworks */,
+				27E131251956F1B90051B744 /* libPods.a in Frameworks */,
 				277F63591956E51300ADD3DD /* UIKit.framework in Frameworks */,
 				277F63531956DECC00ADD3DD /* libxml2.dylib in Frameworks */,
-				277F63121956DBF800ADD3DD /* libPods.a in Frameworks */,
 				277F62EA1956DACE00ADD3DD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +152,7 @@
 		277F62E81956DACE00ADD3DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27E131241956F1B90051B744 /* libPods.a */,
 				277F635F1956E81A00ADD3DD /* libPods-AFNetworking.a */,
 				277F63581956E51300ADD3DD /* UIKit.framework */,
 				277F63541956E0D100ADD3DD /* libxml2.2.dylib */,
@@ -164,6 +167,8 @@
 		277F62EB1956DACE00ADD3DD /* LogicAndDataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				27E131261956F20C0051B744 /* Login.h */,
+				27E131271956F20C0051B744 /* Login.m */,
 				277F635A1956E5FD00ADD3DD /* UserInfoManager.h */,
 				277F635B1956E5FD00ADD3DD /* UserInfoManager.m */,
 				277F63451956DE7200ADD3DD /* HtmlParse */,
@@ -319,6 +324,7 @@
 				277F63701956EC5800ADD3DD /* CalDataModel.m in Sources */,
 				277F634D1956DE7200ADD3DD /* TFHppleElement.m in Sources */,
 				277F636E1956EC5800ADD3DD /* CalDataController.m in Sources */,
+				27E131281956F20C0051B744 /* Login.m in Sources */,
 				277F634E1956DE7200ADD3DD /* XPathQuery.m in Sources */,
 				277F63721956EC5800ADD3DD /* DataModel.m in Sources */,
 				277F634C1956DE7200ADD3DD /* TFHpple.m in Sources */,
@@ -442,8 +448,7 @@
 					"\"${PODS_ROOT}/Headers/AFNetworking\"",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"${SDKROOT}/usr/include/libxml2/**",
-					"$(SRCROOT)/Pods/Headers/AFNetworking",
-					"$(SRCROOT)/Pods/Headers",
+					"$(BUILT_PRODUCTS_DIR)/Pods/Headers/AFNetworking/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,7 +458,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
 			name = Debug;
 		};
@@ -480,7 +485,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
 			name = Release;
 		};
@@ -539,6 +544,7 @@
 				277F630B1956DACE00ADD3DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		277F630C1956DACE00ADD3DD /* Build configuration list for PBXNativeTarget "LogicAndDataLayerTests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +553,7 @@
 				277F630E1956DACE00ADD3DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
