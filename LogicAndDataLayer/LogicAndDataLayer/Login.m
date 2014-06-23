@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     //        [self acquireViewStare];
-    [self shuaXinYanZhengMa];
+    [self shuaXinYanZhengMa:nil];
 }
 -(void)acquireViewStare{
     __weak typeof(self) tempSelf=self;//success在主线程
@@ -61,7 +61,7 @@
     NSLog(@"2提取到得viewstate为%@",self.viewState);
     
 }
--(void)shuaXinYanZhengMa{
+-(void)shuaXinYanZhengMa:(void(^)(UIImage* image))handleImage{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSMutableURLRequest *UrlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: @"http://172.21.96.64/CheckCode.aspx"]];
         //提交Cookie，上一行的NSURLRequest被改为NSMutableURLRequest
@@ -78,7 +78,9 @@
         [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSLog(@"Response: %@", responseObject);
             dispatch_async(dispatch_get_main_queue(), ^{
-                tempSelf.yanZhengMaImageView.image = responseObject;
+                if (responseObject&&handleImage) {
+                    handleImage(responseObject);
+                }
             });
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

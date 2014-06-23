@@ -10,4 +10,9 @@
 
 @interface Login : NSObject
 
+-(void)acquireViewStare;
+
+-(void)shuaXinYanZhengMa:(void(^)(UIImage* image))handleImage;
+
+- (void)login;
 @end

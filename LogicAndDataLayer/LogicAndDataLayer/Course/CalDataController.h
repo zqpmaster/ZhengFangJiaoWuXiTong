@@ -10,4 +10,7 @@
 
 @interface CalDataController : NSObject
 
+- (void)startGet:(void(^)(NSArray *allClasses))success;
+
+
 @end

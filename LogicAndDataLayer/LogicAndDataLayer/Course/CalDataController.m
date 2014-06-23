@@ -12,7 +12,6 @@
 #import "CalDataModel.h"
 
 @interface CalDataController ()
-@property (strong, nonatomic) NSArray *allClasses;
 
 
 @end
@@ -20,7 +19,7 @@
 @implementation CalDataController
 
 
-- (void)startGet
+- (void)startGet:(void(^)(NSArray *allClasses))success
 {
     //
     AFHTTPRequestOperationManager *manager2 = [AFHTTPRequestOperationManager manager];
@@ -63,13 +62,14 @@
                       [allContents addObject:nodeContent];
                   }
                   
-                  [tempSelf sortData:allContents];
+                  NSArray *arr=[tempSelf sortData:allContents];
                   
                   [allContents enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                       NSLog(@"%@",obj);
                   }];
-                  
-                  
+                  if (arr&&success) {
+                      success(arr);
+                  }
               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                   NSLog(@"Error: %@", [error debugDescription]);
               }];//获取登陆后的网页
@@ -79,8 +79,8 @@
     
 	// Do any additional setup after loading the view.
 }
--(void)sortData:(NSMutableArray*)arrayData{
-    
+-(NSArray *)sortData:(NSMutableArray*)arrayData{
+    NSArray *allClasses;
     __block NSMutableIndexSet* indexSet=[NSMutableIndexSet indexSet];
     [arrayData enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSLog(@"%@",obj);
@@ -106,7 +106,8 @@
             CalDataModel *model=[[CalDataModel alloc]initWithmingCheng:arrayData[i*4] jiaoShi:arrayData[i*4+3] shiJian:arrayData[i*4+1] laoShi:arrayData[i*4+2] xingQi:0 kaiShiZhou:0 jieShuZhou:0];
             [cach addObject:model];
         }
-        self.allClasses=[[NSArray alloc]initWithArray:cach];
+        allClasses=[[NSArray alloc]initWithArray:cach];
+        return allClasses;
     }
 }
 @end
