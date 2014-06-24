@@ -13,9 +13,9 @@
 @property (nonatomic,strong) NSMutableArray *chengjiListAll;
 @property (nonatomic, strong)NSString *scoreOfYear;
 
--(NSUInteger)countOfChengJiList;
--(DataModel *)objectInChengJiListAtIndex:(NSUInteger)index;
--(void)addchengjiListWithChengji:(DataModel *)chengJi;
+//-(NSUInteger)countOfChengJiList;
+//-(DataModel *)objectInChengJiListAtIndex:(NSUInteger)index;
+//-(void)addchengjiListWithChengji:(DataModel *)chengJi;
 -(void)removeAllObjects;
 -(void)refreshModal;
 @end

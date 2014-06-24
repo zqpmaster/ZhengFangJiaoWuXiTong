@@ -59,10 +59,10 @@
     NSString *uName=userInfo.userName;
     NSString *zhangHao=userInfo.navBarXueHao;
     if(uName!=nil&&zhangHao!=nil){
+        __weak typeof(self) tempSelf=self;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSDictionary *parameters2 = @{@"xh":zhangHao,@"xm":uName,@"gnmkdm":@"N121605"};
             //        [manager GET:@"http://172.21.96.64/xscjcx.aspx?xh=11024132&xm=%D5%C5%C8%AB%C5%F4&gnmkdm=N121605" parameters:nil
-            __weak typeof(self) tempSelf=self;
             [manager GET:@"http://172.21.96.64/xscjcx.aspx?" parameters:parameters2
                  success:^(AFHTTPRequestOperation *operation, id responseObject) {
                      //              NSLog(@"huoqushuju: %ld",(long)operation.response.statusCode);
@@ -176,17 +176,17 @@
     }
     
 }
--(NSUInteger)countOfChengJiList{
-    return [self.chengJiList count];
-}
-
--(DataModel *)objectInChengJiListAtIndex:(NSUInteger)index{
-    return [self.chengJiList objectAtIndex:index];
-}
-
--(void)addchengjiListWithChengji:(DataModel *)chengJi{
-    [self.chengjiListAll addObject:chengJi];
-}
+//-(NSUInteger)countOfChengJiList{
+//    return [self.chengJiList count];
+//}
+//
+//-(DataModel *)objectInChengJiListAtIndex:(NSUInteger)index{
+//    return [self.chengJiList objectAtIndex:index];
+//}
+//
+//-(void)addchengjiListWithChengji:(DataModel *)chengJi{
+//    [self.chengjiListAll addObject:chengJi];
+//}
 -(NSMutableArray *)chengJiCache{
     if(!_chengJiCache){
         _chengJiCache=[[NSMutableArray alloc]init];
