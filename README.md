@@ -75,3 +75,4 @@ NSDictionary *parameters = @{@"__VIEWSTATE":self.viewState,@"txtUserName"self.xu
         
     }
 </code></pre> 
+祝成功。
