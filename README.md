@@ -9,8 +9,7 @@
 正方教务系统用的编码是GB2312 框架获取下来的NSString虽然已经自动解码，但是很不稳定，有时候会得到空字符串，但是获取下来的DATA就没有这个问题，所以就要手动解码将DATA转为NSString。
 
  <pre><code>cess:^(AFHTTPRequestOperation *operation, id responseObject) {
-                 NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding (kCFStringEncodingGB_18030_2000);
-                 
+                 NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding (kCFStringEncodingGB_18030_2000);                 
                  NSData *data=responseObject;
                  NSString *transStr=[[NSString alloc]initWithData:data encoding:enc];</code></pre>
 光转码也不行，在分析HTML的时候因为网页头部的编码信息也有问题，所以要做手动修改，这样才能被TFhepple正确解
