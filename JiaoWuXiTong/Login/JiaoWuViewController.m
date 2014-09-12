@@ -56,7 +56,7 @@
     
     
     [[self.loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        
+        NSLog(@"aaa");
     }];
 
 }
