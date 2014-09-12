@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 ZQP. All rights reserved.
 //
 
-#import "JiaoWuViewController.h"
+#import "LoginViewController.h"
 #import "FenShuViewController.h"
 #import "KeBiaoViewController.h"
 #import "TFHpple.h"
@@ -15,7 +15,7 @@
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
-@interface JiaoWuViewController ()
+@interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *xueHao;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *yanZhengMa;
@@ -29,7 +29,7 @@
 //@property (nonatomic,strong) NSDictionary* cookieDictionary;
 
 @end
-@implementation JiaoWuViewController{
+@implementation LoginViewController{
     NSString *viewState;
 
 }

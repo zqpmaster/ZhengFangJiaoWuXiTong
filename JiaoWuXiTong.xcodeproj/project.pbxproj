@@ -26,7 +26,7 @@
 		27E7AA5C19C2EAA400E037AD /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA4B19C2EAA400E037AD /* TFHpple.m */; };
 		27E7AA5D19C2EAA400E037AD /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA4D19C2EAA400E037AD /* TFHppleElement.m */; };
 		27E7AA5E19C2EAA400E037AD /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA4F19C2EAA400E037AD /* XPathQuery.m */; };
-		27E7AA5F19C2EAA400E037AD /* JiaoWuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA5219C2EAA400E037AD /* JiaoWuViewController.m */; };
+		27E7AA5F19C2EAA400E037AD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA5219C2EAA400E037AD /* LoginViewController.m */; };
 		27E7AA6019C2EAA400E037AD /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA5519C2EAA400E037AD /* DataModel.m */; };
 		27E7AA6119C2EAA400E037AD /* DataModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA5719C2EAA400E037AD /* DataModelController.m */; };
 		27E7AA6219C2EAA400E037AD /* FenShuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA5919C2EAA400E037AD /* FenShuViewController.m */; };
@@ -74,8 +74,8 @@
 		27E7AA4D19C2EAA400E037AD /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		27E7AA4E19C2EAA400E037AD /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		27E7AA4F19C2EAA400E037AD /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
-		27E7AA5119C2EAA400E037AD /* JiaoWuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiaoWuViewController.h; sourceTree = "<group>"; };
-		27E7AA5219C2EAA400E037AD /* JiaoWuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiaoWuViewController.m; sourceTree = "<group>"; };
+		27E7AA5119C2EAA400E037AD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		27E7AA5219C2EAA400E037AD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		27E7AA5419C2EAA400E037AD /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		27E7AA5519C2EAA400E037AD /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 		27E7AA5619C2EAA400E037AD /* DataModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModelController.h; sourceTree = "<group>"; };
@@ -222,8 +222,8 @@
 		27E7AA5019C2EAA400E037AD /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				27E7AA5119C2EAA400E037AD /* JiaoWuViewController.h */,
-				27E7AA5219C2EAA400E037AD /* JiaoWuViewController.m */,
+				27E7AA5119C2EAA400E037AD /* LoginViewController.h */,
+				27E7AA5219C2EAA400E037AD /* LoginViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -288,7 +288,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = JiaoWu;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = ZQP;
 				TargetAttributes = {
 					2795DD8218A51FAA00F0ADD0 = {
@@ -385,7 +385,7 @@
 				2795DD7618A51FAA00F0ADD0 /* JiaoWuAppDelegate.m in Sources */,
 				27E7AA5B19C2EAA400E037AD /* KeBiaoViewController.m in Sources */,
 				27E7AA6819C2EFE200E037AD /* UserInfoManager.m in Sources */,
-				27E7AA5F19C2EAA400E037AD /* JiaoWuViewController.m in Sources */,
+				27E7AA5F19C2EAA400E037AD /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +439,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -483,7 +482,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -569,7 +567,6 @@
 		2795DD9818A51FAA00F0ADD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JiaoWuXiTong.app/JiaoWuXiTong";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -592,7 +589,6 @@
 		2795DD9918A51FAA00F0ADD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JiaoWuXiTong.app/JiaoWuXiTong";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

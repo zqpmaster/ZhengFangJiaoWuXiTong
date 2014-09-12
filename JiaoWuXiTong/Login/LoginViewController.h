@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JiaoWuViewController : UIViewController{
+@interface LoginViewController : UIViewController{
 }
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 - (IBAction)TextField_DidEndOnExit:(id)sender;
