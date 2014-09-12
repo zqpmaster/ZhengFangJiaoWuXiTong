@@ -27,7 +27,7 @@
 
 @end
 @implementation JiaoWuViewController{
-    __block NSString *viewState;
+    NSString *viewState;
 
 }
 @synthesize viewState;
@@ -87,11 +87,11 @@
     NSMutableURLRequest *UrlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: @"http://172.21.96.64/CheckCode.aspx"]];
     //提交Cookie，上一行的NSURLRequest被改为NSMutableURLRequest
     
-    if(self.AFHROM.cookieDictionary) {
-        [UrlRequest setHTTPShouldHandleCookies:NO];
-        
-        [UrlRequest setAllHTTPHeaderFields:self.AFHROM.cookieDictionary];
-    }
+//    if(self.AFHROM.cookieDictionary) {
+//        [UrlRequest setHTTPShouldHandleCookies:NO];
+//        
+//        [UrlRequest setAllHTTPHeaderFields:self.AFHROM.cookieDictionary];
+//    }
     
     //end
     AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:UrlRequest];

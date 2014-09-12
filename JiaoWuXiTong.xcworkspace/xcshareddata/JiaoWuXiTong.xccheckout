@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C052AEC7-A6D7-4832-9C79-3C95DBA68344</string>
+	<string>FBF55D13-814B-47EA-9ABA-637D7B487694</string>
 	<key>IDESourceControlProjectName</key>
 	<string>JiaoWuXiTong</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>DD5118C2-650B-41D3-84D6-0689ADFB7B8C</key>
-		<string>https://github.com/zqpmaster/FangZhengJiaoWU.git</string>
+		<key>ED40AD75A1E441D885E6F8E2290FF106D59418B5</key>
+		<string>ssh://github.com/zqpmaster/ZhengFangJiaoWuXiTong.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>JiaoWuXiTong.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>DD5118C2-650B-41D3-84D6-0689ADFB7B8C</key>
+		<key>ED40AD75A1E441D885E6F8E2290FF106D59418B5</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/zqpmaster/FangZhengJiaoWU.git</string>
+	<string>ssh://github.com/zqpmaster/ZhengFangJiaoWuXiTong.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DD5118C2-650B-41D3-84D6-0689ADFB7B8C</string>
+	<string>ED40AD75A1E441D885E6F8E2290FF106D59418B5</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DD5118C2-650B-41D3-84D6-0689ADFB7B8C</string>
+			<string>ED40AD75A1E441D885E6F8E2290FF106D59418B5</string>
 			<key>IDESourceControlWCCName</key>
-			<string>FangZhengJiaoWU</string>
+			<string>ZhengFangJiaoWu</string>
 		</dict>
 	</array>
 </dict>

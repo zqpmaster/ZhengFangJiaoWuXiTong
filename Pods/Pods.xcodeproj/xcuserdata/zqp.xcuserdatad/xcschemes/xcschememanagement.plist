@@ -8,25 +8,71 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
+		</dict>
+		<key>Pods-ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ReactiveViewModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-UIColor-Utilities.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-libextobjc.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-libffi.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<true/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2546AEE7E4D54AAE88D2A59A</key>
+		<key>0DB230D17A6749C18B70D394</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F37E6B54D66444F596A09708</key>
+		<key>1E4E85E7D6A0456F8FB1A7FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>863FB02AD420486BBB53792E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B97F77783D0F4ABAB4745550</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B9D09C20106546F797F10587</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE4CF11C83984E1EB2BE66B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F48DF0653397437ABE335BED</key>
 		<dict>
 			<key>primary</key>
 			<true/>

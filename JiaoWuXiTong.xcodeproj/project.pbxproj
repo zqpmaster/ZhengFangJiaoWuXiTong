@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14AFBF01871940AB87FDC801 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB238E8E11348D0886AA18C /* libPods.a */; };
 		2702700A190397E4008EEA0C /* CalDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27027007190397E4008EEA0C /* CalDataModel.m */; };
 		270270131903B461008EEA0C /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 270270101903B461008EEA0C /* DataModel.m */; };
 		270270141903B461008EEA0C /* DataModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270270121903B461008EEA0C /* DataModelController.m */; };
-		27140B8218C56B65008F3059 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 27140B8118C56B65008F3059 /* libxml2.dylib */; };
 		2795DD6618A51FAA00F0ADD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2795DD6518A51FAA00F0ADD0 /* Foundation.framework */; };
 		2795DD6818A51FAA00F0ADD0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2795DD6718A51FAA00F0ADD0 /* CoreGraphics.framework */; };
 		2795DD6A18A51FAA00F0ADD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2795DD6918A51FAA00F0ADD0 /* UIKit.framework */; };
@@ -31,6 +29,8 @@
 		27D0234118BF2D2F00C25D6E /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D0233C18BF2D2F00C25D6E /* TFHpple.m */; };
 		27D0234218BF2D2F00C25D6E /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D0233E18BF2D2F00C25D6E /* TFHppleElement.m */; };
 		27D0234318BF2D2F00C25D6E /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D0234018BF2D2F00C25D6E /* XPathQuery.m */; };
+		27E7AA3D19C2AD1C00E037AD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E7AA3C19C2AD1C00E037AD /* libxml2.dylib */; };
+		E05B4511AE5B449BA6D1FEF4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB238E8E11348D0886AA18C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		270270101903B461008EEA0C /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 		270270111903B461008EEA0C /* DataModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModelController.h; sourceTree = "<group>"; };
 		270270121903B461008EEA0C /* DataModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModelController.m; sourceTree = "<group>"; };
-		27140B8118C56B65008F3059 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		2764470019C2A5160015FCDA /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		2795DD6218A51FAA00F0ADD0 /* JiaoWuXiTong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JiaoWuXiTong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2795DD6518A51FAA00F0ADD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2795DD6718A51FAA00F0ADD0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,6 +80,7 @@
 		27D0233E18BF2D2F00C25D6E /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		27D0233F18BF2D2F00C25D6E /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		27D0234018BF2D2F00C25D6E /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		27E7AA3C19C2AD1C00E037AD /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		3254331E6030405CB647EA06 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8DB238E8E11348D0886AA18C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -89,11 +90,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27140B8218C56B65008F3059 /* libxml2.dylib in Frameworks */,
+				27E7AA3D19C2AD1C00E037AD /* libxml2.dylib in Frameworks */,
 				2795DD6818A51FAA00F0ADD0 /* CoreGraphics.framework in Frameworks */,
 				2795DD6A18A51FAA00F0ADD0 /* UIKit.framework in Frameworks */,
 				2795DD6618A51FAA00F0ADD0 /* Foundation.framework in Frameworks */,
-				14AFBF01871940AB87FDC801 /* libPods.a in Frameworks */,
+				E05B4511AE5B449BA6D1FEF4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +171,8 @@
 		2795DD6418A51FAA00F0ADD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				27140B8118C56B65008F3059 /* libxml2.dylib */,
+				27E7AA3C19C2AD1C00E037AD /* libxml2.dylib */,
+				2764470019C2A5160015FCDA /* libxml2.2.dylib */,
 				2795DD6518A51FAA00F0ADD0 /* Foundation.framework */,
 				2795DD6718A51FAA00F0ADD0 /* CoreGraphics.framework */,
 				2795DD6918A51FAA00F0ADD0 /* UIKit.framework */,
@@ -233,11 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2795DD9418A51FAA00F0ADD0 /* Build configuration list for PBXNativeTarget "JiaoWuXiTong" */;
 			buildPhases = (
-				FD6ECB9DB12D4CEEB3963684 /* Check Pods Manifest.lock */,
+				A9612DACF271425C9BFE50D1 /* Check Pods Manifest.lock */,
 				2795DD5E18A51FAA00F0ADD0 /* Sources */,
 				2795DD5F18A51FAA00F0ADD0 /* Frameworks */,
 				2795DD6018A51FAA00F0ADD0 /* Resources */,
-				BE5F64B9E5C14B0A9951B80F /* Copy Pods Resources */,
+				E0EE730519464336BDA673BA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,22 +324,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BE5F64B9E5C14B0A9951B80F /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FD6ECB9DB12D4CEEB3963684 /* Check Pods Manifest.lock */ = {
+		A9612DACF271425C9BFE50D1 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -350,6 +337,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E0EE730519464336BDA673BA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -455,7 +457,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SDKROOT)/usr/include/libxml2/**",
+					"${SDKROOT}/usr/include/libxml2",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -493,7 +495,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SDKROOT)/usr/include/libxml2/**",
+					"${SDKROOT}/usr/include/libxml2",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
@@ -509,7 +511,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JiaoWuXiTong/JiaoWuXiTong-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/ReactiveViewModel\"",
+					"\"${PODS_ROOT}/Headers/UIColor-Utilities\"",
+					"${SDKROOT}/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "JiaoWuXiTong/JiaoWuXiTong-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -524,7 +536,17 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yang liu (274AR9H38U)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JiaoWuXiTong/JiaoWuXiTong-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/ReactiveViewModel\"",
+					"\"${PODS_ROOT}/Headers/UIColor-Utilities\"",
+					"${SDKROOT}/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "JiaoWuXiTong/JiaoWuXiTong-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
