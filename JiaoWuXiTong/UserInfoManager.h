@@ -10,4 +10,9 @@
 
 @interface UserInfoManager : NSObject
 
++(instancetype)shareManager;
+
+@property (strong,nonatomic)NSString *name;
+@property (strong,nonatomic)NSString *xueHao;
+
 @end

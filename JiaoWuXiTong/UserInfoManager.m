@@ -10,4 +10,13 @@
 
 @implementation UserInfoManager
 
++(instancetype)shareManager{
+    static UserInfoManager *manager;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager=[[UserInfoManager alloc]init];
+    });
+    return manager;
+}
+
 @end

@@ -11,6 +11,7 @@
 #import "KeBiaoViewController.h"
 #import "TFHpple.h"
 #import "JiaoWuAppDelegate.h"
+#import "UserInfoManager.h"
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
@@ -45,11 +46,20 @@
                                                       ] reduce:^(NSString *username, NSString *password) {
                                                           return @(username.length > 0 && password.length > 0);
                                                       }];//binding
-//        [self acquireViewStare];
+    
+        [self acquireViewStare];
         [self shuaXinYanZhengMa];
     
+//
+    RAC([UserInfoManager shareManager],xueHao)=RACObserve(self, xueHaoNumber);
+    RAC([UserInfoManager shareManager],name)=RACObserve(self, xingMing);
+    
+    
+    [[self.loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        
+    }];
 
-    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -97,6 +107,10 @@
 
 }
 -(void)shuaXinYanZhengMa{
+    
+    
+    
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     NSMutableURLRequest *UrlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: @"http://172.21.96.64/CheckCode.aspx"]];
     //提交Cookie，上一行的NSURLRequest被改为NSMutableURLRequest
@@ -110,6 +124,7 @@
     //end
     AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:UrlRequest];
     requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
+
     [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"Response: %@", responseObject);
         dispatch_async(dispatch_get_main_queue(), ^{

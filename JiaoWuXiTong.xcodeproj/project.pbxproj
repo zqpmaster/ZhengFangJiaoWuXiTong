@@ -30,6 +30,7 @@
 		27E7AA6019C2EAA400E037AD /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA5519C2EAA400E037AD /* DataModel.m */; };
 		27E7AA6119C2EAA400E037AD /* DataModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA5719C2EAA400E037AD /* DataModelController.m */; };
 		27E7AA6219C2EAA400E037AD /* FenShuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA5919C2EAA400E037AD /* FenShuViewController.m */; };
+		27E7AA6819C2EFE200E037AD /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA6719C2EFE200E037AD /* UserInfoManager.m */; };
 		E05B4511AE5B449BA6D1FEF4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB238E8E11348D0886AA18C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,8 @@
 		27E7AA5719C2EAA400E037AD /* DataModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModelController.m; sourceTree = "<group>"; };
 		27E7AA5819C2EAA400E037AD /* FenShuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FenShuViewController.h; sourceTree = "<group>"; };
 		27E7AA5919C2EAA400E037AD /* FenShuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FenShuViewController.m; sourceTree = "<group>"; };
+		27E7AA6619C2EFE200E037AD /* UserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
+		27E7AA6719C2EFE200E037AD /* UserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
 		3254331E6030405CB647EA06 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8DB238E8E11348D0886AA18C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,6 +153,8 @@
 			children = (
 				2795DD7418A51FAA00F0ADD0 /* JiaoWuAppDelegate.h */,
 				2795DD7518A51FAA00F0ADD0 /* JiaoWuAppDelegate.m */,
+				27E7AA6619C2EFE200E037AD /* UserInfoManager.h */,
+				27E7AA6719C2EFE200E037AD /* UserInfoManager.m */,
 				2795DD7718A51FAA00F0ADD0 /* Main.storyboard */,
 				2795DD7D18A51FAA00F0ADD0 /* Images.xcassets */,
 				27E7AA4419C2EAA400E037AD /* Course */,
@@ -379,6 +384,7 @@
 				27E7AA6219C2EAA400E037AD /* FenShuViewController.m in Sources */,
 				2795DD7618A51FAA00F0ADD0 /* JiaoWuAppDelegate.m in Sources */,
 				27E7AA5B19C2EAA400E037AD /* KeBiaoViewController.m in Sources */,
+				27E7AA6819C2EFE200E037AD /* UserInfoManager.m in Sources */,
 				27E7AA5F19C2EAA400E037AD /* JiaoWuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
