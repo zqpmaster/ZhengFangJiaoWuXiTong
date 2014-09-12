@@ -58,6 +58,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="login:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ipM-Ka-Rem"/>
                                 </connections>
@@ -117,7 +120,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="登陆" id="ghF-13-rjS"/>
                     <connections>
-                        <outlet property="miMa" destination="NRd-xU-efw" id="gjU-ed-teb"/>
+                        <outlet property="loginBtn" destination="2bO-1j-Ua4" id="ljk-jI-h2G"/>
+                        <outlet property="passwordTextField" destination="NRd-xU-efw" id="ekh-lT-QRO"/>
                         <outlet property="text" destination="amj-Mv-Ybm" id="iin-57-PRV"/>
                         <outlet property="xueHao" destination="asv-uR-j4o" id="CI2-Ii-ufF"/>
                         <outlet property="yanZhengMa" destination="clz-hW-J2h" id="OQ8-wI-Mou"/>

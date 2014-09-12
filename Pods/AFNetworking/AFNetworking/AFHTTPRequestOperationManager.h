@@ -304,5 +304,7 @@
                            success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                            failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
+@property (nonatomic,strong) NSDictionary* cookieDictionary;
+
 @end
 

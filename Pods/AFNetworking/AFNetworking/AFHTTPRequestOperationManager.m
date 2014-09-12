@@ -110,22 +110,52 @@
 }
 
 #pragma mark -
-
 - (AFHTTPRequestOperation *)GET:(NSString *)URLString
-                     parameters:(id)parameters
+                     parameters:(NSDictionary *)parameters
                         success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
+    
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"GET" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters error:nil];
+    //以下为后加的代码
+    
+    
+    if(self.cookieDictionary) {
+        NSMutableDictionary*newDictionary=[self.cookieDictionary mutableCopy];
+        
+        [newDictionary setValue:@"http://gdjwgl.bjut.edu.cn/xs_main.aspx?xh=11021235" forKey:@"Referer"];
+        
+        //
+        //         NSEnumerator * enumeratorValue = [newDictionary objectEnumerator];
+        //         //快速枚举遍历所有Value和Key
+        //         NSLog(@"Cookie输出开始");
+        //
+        //         for (NSObject *object in enumeratorValue) {
+        //         NSLog(@"遍历Value的值: %@",object);
+        //         }
+        //         NSEnumerator * enumeratorKey = [newDictionary keyEnumerator];
+        //
+        //         for (NSObject *object in enumeratorKey) {
+        //         NSLog(@"遍历KEY的值: %@",object);
+        //         }
+        //
+        
+        
+        //        [request setAllHTTPHeaderFields:newDictionary];
+        //        [request setHTTPShouldHandleCookies:NO];
+        [request setAllHTTPHeaderFields:newDictionary];
+        
+    }
+    
+    //结束 提交Cookie
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:success failure:failure];
-
     [self.operationQueue addOperation:operation];
-
+    
     return operation;
 }
 
 - (AFHTTPRequestOperation *)HEAD:(NSString *)URLString
-                      parameters:(id)parameters
+                      parameters:(NSDictionary *)parameters
                          success:(void (^)(AFHTTPRequestOperation *operation))success
                          failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
@@ -135,24 +165,80 @@
             success(requestOperation);
         }
     } failure:failure];
-
     [self.operationQueue addOperation:operation];
-
+    
     return operation;
 }
 
 - (AFHTTPRequestOperation *)POST:(NSString *)URLString
-                      parameters:(id)parameters
+                      parameters:(NSDictionary *)parameters
                          success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                          failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"POST" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters error:nil];
+    //
+    //    if(self.cookieDictionary) {
+    //        [request setHTTPShouldHandleCookies:NO];
+    //        [request setAllHTTPHeaderFields:self.cookieDictionary];
+    //    }
+    ////
+    
+    if(self.cookieDictionary) {
+        
+        NSMutableDictionary*newDictionary=[self.cookieDictionary mutableCopy];
+        //        [newDictionary setValue:@"http://gdjwgl.bjut.edu.cn/xscjcx.aspx?xh=11024132&xm=%D5%C5%C8%AB%C5%F4&gnmkdm=N121605" forKey:@"Referer"];
+        
+        [newDictionary setValue:@"http://gdjwgl.bjut.edu.cn/xs_main.aspx?xh=11111111" forKey:@"Referer"];
+        
+        
+        
+        //
+        //         NSEnumerator * enumeratorValue = [newDictionary objectEnumerator];
+        //         //快速枚举遍历所有Value和Key
+        //         NSLog(@"Cookie输出开始");
+        //
+        //         for (NSObject *object in enumeratorValue) {
+        //         NSLog(@"遍历Value的值: %@",object);
+        //         }
+        //         NSEnumerator * enumeratorKey = [newDictionary keyEnumerator];
+        //
+        //         for (NSObject *object in enumeratorKey) {
+        //         NSLog(@"遍历KEY的值: %@",object);
+        //         }
+        //
+        
+        
+        //        [request setAllHTTPHeaderFields:newDictionary];
+        //        [request setHTTPShouldHandleCookies:NO];
+        [request setAllHTTPHeaderFields:newDictionary];
+        
+    }
+    
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:success failure:failure];
-
     [self.operationQueue addOperation:operation];
-
+    
+    //以下为后加的代码
+    /*
+     NSEnumerator * enumeratorValue = [self.cookieDictionary objectEnumerator];
+     //快速枚举遍历所有Value和Key
+     NSLog(@"Cookie输出开始");
+     
+     for (NSObject *object in enumeratorValue) {
+     NSLog(@"遍历Value的值: %@",object);
+     }
+     NSEnumerator * enumeratorKey = [self.cookieDictionary keyEnumerator];
+     
+     for (NSObject *object in enumeratorKey) {
+     NSLog(@"遍历KEY的值: %@",object);
+     }
+     */
+    //
+    
+    //提交Cookie
+    //后加的代码结束
     return operation;
 }
+
 
 - (AFHTTPRequestOperation *)POST:(NSString *)URLString
                       parameters:(id)parameters
@@ -248,6 +334,30 @@
     HTTPClient.responseSerializer = [self.responseSerializer copyWithZone:zone];
     
     return HTTPClient;
+}
+//后加的代码
+
+-(NSDictionary*)cookieDictionary{
+    if (!_cookieDictionary) {
+        //       NSDictionary *cookieDe=[[NSUserDefaults standardUserDefaults]dictionaryForKey:@"cookie"];
+        //       if(cookieDe) return cookieDe;
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://gdjwgl.bjut.edu.cn/default2.aspx"]];
+        //  cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
+        //timeoutInterval:3];
+        
+        [NSURLConnection sendSynchronousRequest:request
+                              returningResponse:nil
+                                          error:nil];
+        
+        NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+        NSArray *cookies =[cookieJar cookies];
+        _cookieDictionary= [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
+        //       _cookieDictionary=nil;
+    }
+    
+    
+    return _cookieDictionary;
+    //获取cookie
 }
 
 @end
