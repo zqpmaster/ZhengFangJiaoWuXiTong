@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KeBiaoViewController : UIViewController
+@interface KeBiaoViewController : UITableViewController
 
 @end

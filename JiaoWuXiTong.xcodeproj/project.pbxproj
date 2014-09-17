@@ -20,6 +20,7 @@
 		2795DD8718A51FAA00F0ADD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2795DD6918A51FAA00F0ADD0 /* UIKit.framework */; };
 		2795DD8F18A51FAA00F0ADD0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2795DD8D18A51FAA00F0ADD0 /* InfoPlist.strings */; };
 		2795DD9118A51FAA00F0ADD0 /* JiaoWuXiTongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795DD9018A51FAA00F0ADD0 /* JiaoWuXiTongTests.m */; };
+		27AAE65919C9C073001DA020 /* CourseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AAE65819C9C073001DA020 /* CourseViewModel.m */; };
 		27E7AA3D19C2AD1C00E037AD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E7AA3C19C2AD1C00E037AD /* libxml2.dylib */; };
 		27E7AA5A19C2EAA400E037AD /* CalDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA4619C2EAA400E037AD /* CalDataModel.m */; };
 		27E7AA5B19C2EAA400E037AD /* KeBiaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA4819C2EAA400E037AD /* KeBiaoViewController.m */; };
@@ -63,6 +64,8 @@
 		2795DD8C18A51FAA00F0ADD0 /* JiaoWuXiTongTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JiaoWuXiTongTests-Info.plist"; sourceTree = "<group>"; };
 		2795DD8E18A51FAA00F0ADD0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2795DD9018A51FAA00F0ADD0 /* JiaoWuXiTongTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JiaoWuXiTongTests.m; sourceTree = "<group>"; };
+		27AAE65719C9C072001DA020 /* CourseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseViewModel.h; sourceTree = "<group>"; };
+		27AAE65819C9C073001DA020 /* CourseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseViewModel.m; sourceTree = "<group>"; };
 		27E7AA3C19C2AD1C00E037AD /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		27E7AA4519C2EAA400E037AD /* CalDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalDataModel.h; sourceTree = "<group>"; };
 		27E7AA4619C2EAA400E037AD /* CalDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalDataModel.m; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 			children = (
 				27E7AA4519C2EAA400E037AD /* CalDataModel.h */,
 				27E7AA4619C2EAA400E037AD /* CalDataModel.m */,
+				27AAE65719C9C072001DA020 /* CourseViewModel.h */,
+				27AAE65819C9C073001DA020 /* CourseViewModel.m */,
 				27E7AA4719C2EAA400E037AD /* KeBiaoViewController.h */,
 				27E7AA4819C2EAA400E037AD /* KeBiaoViewController.m */,
 			);
@@ -375,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27E7AA5D19C2EAA400E037AD /* TFHppleElement.m in Sources */,
+				27AAE65919C9C073001DA020 /* CourseViewModel.m in Sources */,
 				27E7AA6119C2EAA400E037AD /* DataModelController.m in Sources */,
 				27E7AA5E19C2EAA400E037AD /* XPathQuery.m in Sources */,
 				27E7AA6019C2EAA400E037AD /* DataModel.m in Sources */,

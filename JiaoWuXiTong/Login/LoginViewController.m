@@ -13,19 +13,18 @@
 #import "JiaoWuAppDelegate.h"
 #import "UserInfoManager.h"
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
-
 @interface LoginViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *xueHao;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UITextField *yanZhengMa;
-@property (weak, nonatomic) IBOutlet UIImageView *yanZhengMaImageView;
+@property (weak, nonatomic) IBOutlet UITextField *numberText;
+@property (weak, nonatomic) IBOutlet UITextField *passwordText;
+@property (weak, nonatomic) IBOutlet UITextField *checkCodeText;
+@property (weak, nonatomic) IBOutlet UIImageView *checkCodeImageView;
 @property (strong, nonatomic) AFHTTPRequestOperationManager *AFHROM;
 @property (weak, nonatomic) IBOutlet UITextView *text;
 @property (copy,nonatomic) NSString *viewState;
+@property (weak, nonatomic) IBOutlet UIButton *refreshBtn;
 
-@property (strong,nonatomic) NSString *xueHaoNumber;
-@property(strong,nonatomic)NSString *xingMing;
+@property (strong,nonatomic) NSString *stuNoNumber;
+@property(strong,nonatomic)NSString *name;
 //@property (nonatomic,strong) NSDictionary* cookieDictionary;
 
 @end
@@ -39,8 +38,8 @@
     [super viewDidLoad];
     RAC(self.loginBtn, enabled) = [RACSignal
                                       combineLatest:@[
-                                                      self.xueHao.rac_textSignal,
-                                                      self.passwordTextField.rac_textSignal,
+                                                      self.numberText.rac_textSignal,
+                                                      self.passwordText.rac_textSignal,
 //                                                      RACObserve(LoginManager.sharedManager, loggingIn),
 //                                                      RACObserve(self, loggedIn)
                                                       ] reduce:^(NSString *username, NSString *password) {
@@ -51,13 +50,23 @@
         [self shuaXinYanZhengMa];
     
 //
-    RAC([UserInfoManager shareManager],xueHao)=RACObserve(self, xueHaoNumber);
-    RAC([UserInfoManager shareManager],name)=RACObserve(self, xingMing);
+    RAC([UserInfoManager shareManager],xueHao)=RACObserve(self, stuNoNumber);
+    RAC([UserInfoManager shareManager],name)=RACObserve(self, name);
+    
     
     
     [[self.loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        NSLog(@"aaa");
+        NSLog(@"aaa");//测试
     }];
+    
+    self.refreshBtn.rac_command = [[RACCommand alloc] initWithSignalBlock:^(id _) {
+        NSLog(@"button was pressed!");
+        //测试
+        return [RACSignal empty];
+    }];
+    
+    
+
 
 }
 - (void)didReceiveMemoryWarning
@@ -128,7 +137,7 @@
     [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"Response: %@", responseObject);
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.yanZhengMaImageView.image = responseObject;
+            self.checkCodeImageView.image = responseObject;
         });
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -166,8 +175,8 @@
     //    manager.responseSerializer.stringEncoding = NSUTF8StringEncoding;
     //   manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     //
-    NSString *xueHaoSe=self.xueHao.text;
-    NSDictionary *parameters = @{@"__VIEWSTATE":self.viewState,@"txtUserName": self.xueHao.text,@"TextBox2":self.passwordTextField.text,@"txtSecretCode":self.yanZhengMa.text,@"RadioButtonList1":@"学生",@"Button1":@""};
+    NSString *xueHaoSe=self.numberText.text;
+    NSDictionary *parameters = @{@"__VIEWSTATE":self.viewState,@"txtUserName": self.numberText.text,@"TextBox2":self.passwordText.text,@"txtSecretCode":self.checkCodeText.text,@"RadioButtonList1":@"学生",@"Button1":@""};
     
     [self.AFHROM POST:@"http://172.21.96.64/default2.aspx" parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -204,11 +213,11 @@
                   //              self.viewState=[element objectForKey:@"value"];
                   //              NSLog(@"之后%@",self.viewState);
                   NSString *namess=[content substringFromIndex:10];
-                  self.xingMing=[namess substringToIndex:[namess length]-2];
+                  self.name=[namess substringToIndex:[namess length]-2];
                   NSLog(@"学号姓名为%@%@%@",content,ta,namess);
               }
               //Get all the cells of the 2nd row of the 3rd table
-              self.xueHaoNumber=xueHaoSe;
+              self.stuNoNumber=xueHaoSe;
 
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Error: %@", @"???");
@@ -228,18 +237,5 @@
     }
     return _AFHROM;
 }
--(void)setXueHaoNumber:(NSString *)xueHaoNumber{
-    _xueHaoNumber = xueHaoNumber;
-    JiaoWuAppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    myDelegate.navBarXueHao = _xueHaoNumber;
-    NSLog(@"%@",myDelegate.navBarXueHao);
-}
--(void)setXingMing:(NSString *)xingMing{
-    _xingMing=xingMing;
-    JiaoWuAppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    myDelegate.userName = _xingMing;
-    
-}
-
 @end
 
