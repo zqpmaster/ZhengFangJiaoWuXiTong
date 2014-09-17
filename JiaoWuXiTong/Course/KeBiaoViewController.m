@@ -34,62 +34,62 @@
 {
     [super viewDidLoad];
 //
-    AFHTTPRequestOperationManager *manager2 = [AFHTTPRequestOperationManager manager];
+    [self getCourse];
     
-    manager2.responseSerializer = [AFHTTPResponseSerializer serializer];
+	// Do any additional setup after loading the view.
+}
+-(void)getCourse{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     JiaoWuAppDelegate *mainDele=[[UIApplication sharedApplication]delegate];
     NSString *uName=mainDele.userName;
     NSString *zhangHao=mainDele.navBarXueHao;
     if(uName!=nil&&zhangHao!=nil){
-    NSDictionary *parameters2 = @{@"xh":zhangHao,@"xm":uName,@"gnmkdm":@"N121603"};
-    [manager2 GET:@"http://172.21.96.64/xskbcx.aspx?xh=11024132&xm=%D5%C5%C8%AB%C5%F4&gnmkdm=N121603" parameters:parameters2
-          success:^(AFHTTPRequestOperation *operation, id responseObject) {
-              NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding (kCFStringEncodingGB_18030_2000);
-              
-              NSData *data=responseObject;
-              NSString *transStr=[[NSString alloc]initWithData:data encoding:enc];
-              
-              NSLog(@"huoqushuju: %ld",(long)operation.response.statusCode);
-              NSLog(@"数据：%@",transStr);
-              self.keBiao.text=transStr;
-              NSString *utf8HtmlStr = [transStr stringByReplacingOccurrencesOfString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\">" withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];
-              NSData *htmlDataUTF8 = [utf8HtmlStr dataUsingEncoding:NSUTF8StringEncoding];
-              TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:htmlDataUTF8];
-              NSArray *elements  = [xpathParser searchWithXPathQuery:@"//table[@id='Table1']/tr/td/child::text()"];
-              
-              // Access the first cell
-              NSUInteger count=[elements count];
-              NSMutableArray *allContents=[NSMutableArray array];
-              for (int i=0; i<count; i++) {
-
-              TFHppleElement *element = [elements objectAtIndex:i];
-              
-              // Get the text within the cell tag
-//              NSString *content = [element text];
-              NSString *ta=[element tagName];
-//                  NSDictionary *dic=[element attributes];
-                  NSString *nodeContent=[element content];
-              NSLog(@"课程为%@%@",nodeContent,ta);
-                  [allContents addObject:nodeContent];
-              }
-
-              [self sortData:allContents];
-              
-              [allContents enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-              NSLog(@"%@",obj);
-              }];
-
-
-          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-              NSLog(@"Error: %@", [error debugDescription]);
-          }];//获取登陆后的网页
-
-    
+        NSDictionary *parameters2 = @{@"xh":zhangHao,@"xm":uName,@"gnmkdm":@"N121603"};
+        [manager GET:@"http://172.21.96.64/xskbcx.aspx?xh=11024132&xm=%D5%C5%C8%AB%C5%F4&gnmkdm=N121603" parameters:parameters2
+              success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                  NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding (kCFStringEncodingGB_18030_2000);
+                  
+                  NSData *data=responseObject;
+                  NSString *transStr=[[NSString alloc]initWithData:data encoding:enc];
+                  
+                  NSLog(@"huoqushuju: %ld",(long)operation.response.statusCode);
+                  NSLog(@"数据：%@",transStr);
+                  self.keBiao.text=transStr;
+                  NSString *utf8HtmlStr = [transStr stringByReplacingOccurrencesOfString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\">" withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];
+                  NSData *htmlDataUTF8 = [utf8HtmlStr dataUsingEncoding:NSUTF8StringEncoding];
+                  TFHpple *xpathParser = [[TFHpple alloc]initWithHTMLData:htmlDataUTF8];
+                  NSArray *elements  = [xpathParser searchWithXPathQuery:@"//table[@id='Table1']/tr/td/child::text()"];
+                  
+                  // Access the first cell
+                  NSUInteger count=[elements count];
+                  NSMutableArray *allContents=[NSMutableArray array];
+                  for (int i=0; i<count; i++) {
+                      
+                      TFHppleElement *element = [elements objectAtIndex:i];
+                      
+                      // Get the text within the cell tag
+                      //              NSString *content = [element text];
+                      NSString *ta=[element tagName];
+                      //                  NSDictionary *dic=[element attributes];
+                      NSString *nodeContent=[element content];
+                      NSLog(@"课程为%@%@",nodeContent,ta);
+                      [allContents addObject:nodeContent];
+                  }
+                  
+                  [self sortData:allContents];
+                  
+                  
+                  
+              } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                  NSLog(@"Error: %@", [error debugDescription]);
+              }];//获取登陆后的网页
+        
+        
     }
-    
-	// Do any additional setup after loading the view.
-}
 
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -98,7 +98,8 @@
 -(void)sortData:(NSMutableArray*)arrayData{
     
     __block NSMutableIndexSet* indexSet=[NSMutableIndexSet indexSet];
-    [arrayData enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    
+    [arrayData enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {//synchronously
         NSLog(@"%@",obj);
         NSString *string=obj;
         if([string isEqualToString:@" "]||[string hasPrefix:@"星期"]||[string isEqualToString:@"上午"]||[string isEqualToString:@"下午"]||[string isEqualToString:@"早晨"]||[string isEqualToString:@"晚上"]){
