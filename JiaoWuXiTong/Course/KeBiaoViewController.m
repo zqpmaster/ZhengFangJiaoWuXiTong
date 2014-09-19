@@ -35,10 +35,11 @@
     [super viewDidLoad];
 //
     self.viewModel=[[CourseViewModel alloc]init];
+    __weak typeof(self) weakSelf=self;
     [self.viewModel.updatedContentSignal subscribeNext:^(id x) {
-        [self.tableView reloadData];
+        __strong typeof(self) strongSelf=weakSelf;
+        [strongSelf.tableView reloadData];
     }];
-    
 	// Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{

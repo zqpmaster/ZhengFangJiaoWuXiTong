@@ -9,7 +9,7 @@
 #import "DataModelController.h"
 #import "DataModel.h"
 #import "TFHpple.h"
-#import "JiaoWuAppDelegate.h"
+#import "UserInfoManager.h"
 
 @interface DataModelController ()
 @property(nonatomic,strong)NSString *viewState;
@@ -56,9 +56,9 @@
     manager.responseSerializer.stringEncoding=enc;
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.requestSerializer.stringEncoding = enc;
-    JiaoWuAppDelegate *mainDele=[[UIApplication sharedApplication]delegate];
-    NSString *uName=mainDele.userName;
-    NSString *zhangHao=mainDele.navBarXueHao;
+    UserInfoManager *userInfo=[UserInfoManager shareManager];
+    NSString *uName=userInfo.name;
+    NSString *zhangHao=userInfo.xueHao;
     if(uName!=nil&&zhangHao!=nil){
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSDictionary *parameters2 = @{@"xh":zhangHao,@"xm":uName,@"gnmkdm":@"N121605"};

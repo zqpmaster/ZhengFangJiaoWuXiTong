@@ -11,7 +11,4 @@
 @interface JiaoWuAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong,nonatomic) NSString *navBarXueHao;
-@property (strong, nonatomic)NSString *userName;
-
 @end

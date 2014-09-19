@@ -27,8 +27,11 @@
     return self;
 }
 -(void)prepare{
+    __weak typeof(self) weakSelf=self;
     [self.didBecomeActiveSignal subscribeNext:^(id x) {
-        [self getCourse];
+        __strong typeof(self) strongSelf=weakSelf;
+
+        [strongSelf getCourse];
     }];
 }
 -(void)getCourse{
