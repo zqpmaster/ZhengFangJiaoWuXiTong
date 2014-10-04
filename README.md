@@ -1,10 +1,11 @@
 
-正方教务系统IOS客户端数据请求DEMO
+##正方教务系统IOS客户端数据请求DEMO
 
 用到的几个工具
-* chrome的开发者工具   查看每次HTTP请求命令与参数等。
-* AFNetworking    ios网络请求开源框架，同样的有ASIHttprequest。选择AFnetworking是因为它更简单，并且现在还在更新维护，ASI好像好久没有更新。
-* TFhepple    Html分析类库。
+- chrome的开发者工具   查看每次HTTP请求命令与参数等。
+- AFNetworking    ios网络请求开源框架，同样的有ASIHttprequest。选择AFnetworking是因为它更简单，并且现在还在更新维护，ASI好像好久没有更新。
+- TFhepple    Html分析类库。
+
 学校的正方教务因为没有对应的JSON或者XML数据接口，所以只能模拟网页的所有行为，获取html 分析html。
 正方教务系统用的编码是GB2312 框架获取下来的NSString虽然已经自动解码，但是很不稳定，有时候会得到空字符串，但是获取下来的DATA就没有这个问题，所以就要手动解码将DATA转为NSString。
 
