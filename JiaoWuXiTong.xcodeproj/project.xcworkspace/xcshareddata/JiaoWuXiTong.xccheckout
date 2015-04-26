@@ -10,31 +10,31 @@
 	<string>JiaoWuXiTong</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2C0AD577-5F76-4CF6-A9B2-5F8B193446F9</key>
-		<string>http://git.oschina.net/zqpmaster/BjutHelper.git</string>
+		<key>ED40AD75A1E441D885E6F8E2290FF106D59418B5</key>
+		<string>https://github.com/zqpmaster/ZhengFangJiaoWuXiTong.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>JiaoWuXiTong.xcodeproj/project.xcworkspace</string>
+	<string>JiaoWuXiTong.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2C0AD577-5F76-4CF6-A9B2-5F8B193446F9</key>
+		<key>ED40AD75A1E441D885E6F8E2290FF106D59418B5</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://git.oschina.net/zqpmaster/BjutHelper.git</string>
+	<string>https://github.com/zqpmaster/ZhengFangJiaoWuXiTong.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2C0AD577-5F76-4CF6-A9B2-5F8B193446F9</string>
+	<string>ED40AD75A1E441D885E6F8E2290FF106D59418B5</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2C0AD577-5F76-4CF6-A9B2-5F8B193446F9</string>
+			<string>ED40AD75A1E441D885E6F8E2290FF106D59418B5</string>
 			<key>IDESourceControlWCCName</key>
-			<string>JiaoWuXiTong</string>
+			<string>ZhengFangJiaoWuXiTong</string>
 		</dict>
 	</array>
 </dict>
