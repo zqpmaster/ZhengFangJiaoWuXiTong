@@ -1,11 +1,11 @@
 PODS:
   - AFNetworking (2.4.1):
-    - AFNetworking/NSURLConnection
-    - AFNetworking/NSURLSession
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-    - AFNetworking/UIKit
+    - AFNetworking/NSURLConnection (= 2.4.1)
+    - AFNetworking/NSURLSession (= 2.4.1)
+    - AFNetworking/Reachability (= 2.4.1)
+    - AFNetworking/Security (= 2.4.1)
+    - AFNetworking/Serialization (= 2.4.1)
+    - AFNetworking/UIKit (= 2.4.1)
   - AFNetworking/NSURLConnection (2.4.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
@@ -21,34 +21,34 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - libextobjc (0.3):
-    - libextobjc/EXTADT
-    - libextobjc/EXTAnnotation
-    - libextobjc/EXTAspect
-    - libextobjc/EXTBlockMethod
-    - libextobjc/EXTBlockTarget
-    - libextobjc/EXTConcreteProtocol
-    - libextobjc/EXTDispatchObject
-    - libextobjc/EXTFinalMethod
-    - libextobjc/EXTKeyPathCoding
-    - libextobjc/EXTMaybe
-    - libextobjc/EXTMixin
-    - libextobjc/EXTMultimethod
-    - libextobjc/EXTMultiObject
-    - libextobjc/EXTNil
-    - libextobjc/EXTPassthrough
-    - libextobjc/EXTPrivateMethod
-    - libextobjc/EXTProtocolCategory
-    - libextobjc/EXTSafeCategory
-    - libextobjc/EXTScope
-    - libextobjc/EXTSelectorChecking
-    - libextobjc/EXTSwizzle
-    - libextobjc/EXTSynthesize
-    - libextobjc/EXTTuple
-    - libextobjc/EXTVarargs
-    - libextobjc/NSInvocation+EXT
-    - libextobjc/NSMethodSignature+EXT
-    - libextobjc/RuntimeExtensions
-    - libextobjc/UmbrellaHeader
+    - libextobjc/EXTADT (= 0.3)
+    - libextobjc/EXTAnnotation (= 0.3)
+    - libextobjc/EXTAspect (= 0.3)
+    - libextobjc/EXTBlockMethod (= 0.3)
+    - libextobjc/EXTBlockTarget (= 0.3)
+    - libextobjc/EXTConcreteProtocol (= 0.3)
+    - libextobjc/EXTDispatchObject (= 0.3)
+    - libextobjc/EXTFinalMethod (= 0.3)
+    - libextobjc/EXTKeyPathCoding (= 0.3)
+    - libextobjc/EXTMaybe (= 0.3)
+    - libextobjc/EXTMixin (= 0.3)
+    - libextobjc/EXTMultimethod (= 0.3)
+    - libextobjc/EXTMultiObject (= 0.3)
+    - libextobjc/EXTNil (= 0.3)
+    - libextobjc/EXTPassthrough (= 0.3)
+    - libextobjc/EXTPrivateMethod (= 0.3)
+    - libextobjc/EXTProtocolCategory (= 0.3)
+    - libextobjc/EXTSafeCategory (= 0.3)
+    - libextobjc/EXTScope (= 0.3)
+    - libextobjc/EXTSelectorChecking (= 0.3)
+    - libextobjc/EXTSwizzle (= 0.3)
+    - libextobjc/EXTSynthesize (= 0.3)
+    - libextobjc/EXTTuple (= 0.3)
+    - libextobjc/EXTVarargs (= 0.3)
+    - libextobjc/NSInvocation+EXT (= 0.3)
+    - libextobjc/NSMethodSignature+EXT (= 0.3)
+    - libextobjc/RuntimeExtensions (= 0.3)
+    - libextobjc/UmbrellaHeader (= 0.3)
   - libextobjc/EXTADT (0.3):
     - libextobjc/RuntimeExtensions
   - libextobjc/EXTAnnotation (0.3):
@@ -106,8 +106,8 @@ PODS:
   - libextobjc/UmbrellaHeader (0.3)
   - libffi (3.0.13)
   - ReactiveCocoa (2.1.8):
-    - ReactiveCocoa/Core
-    - ReactiveCocoa/no-arc
+    - ReactiveCocoa/Core (= 2.1.8)
+    - ReactiveCocoa/no-arc (= 2.1.8)
   - ReactiveCocoa/Core (2.1.8):
     - ReactiveCocoa/no-arc
   - ReactiveCocoa/no-arc (2.1.8)
@@ -123,11 +123,11 @@ DEPENDENCIES:
   - UIColor-Utilities (= 1.0.1)
 
 SPEC CHECKSUMS:
-  AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
-  libextobjc: f1b1ea2e42fbfe7ae5d4f8624bbb4f56002e8536
-  libffi: c6c0bfc3b84872fd99e0e35f8d9665fc7a996f6f
-  ReactiveCocoa: 399d3ad0c8ac73d79bed5bcd076a04f46ec635fc
-  ReactiveViewModel: 5a678d4f2cb7b6f7f60b10f58c37e30f9db684a2
-  UIColor-Utilities: 3f13aebe447f5e19c8d3aa18c194c53116b23537
+  AFNetworking: 41d45d2c14219af0fa5addf3cfd433a002c13c9f
+  libextobjc: 34cd4e77070160a3fa910db193e1e194e8591aa2
+  libffi: 1f65dbbdb2c88491c06640dd3bb96030070ca97c
+  ReactiveCocoa: f89f2e009a87951b50321bf9feb958823fcc617e
+  ReactiveViewModel: 171492c2d30d3eb3c89730fd180c0f6a2ae7e774
+  UIColor-Utilities: 6746a54dcdb3bc012dd7aeaeea5588ae2100beb2
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.35.0

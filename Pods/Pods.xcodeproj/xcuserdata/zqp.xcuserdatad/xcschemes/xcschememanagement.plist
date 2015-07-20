@@ -4,79 +4,43 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-AFNetworking.xcscheme</key>
+		<key>Pods-JiaoWuXiTong-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ReactiveCocoa.xcscheme</key>
+		<key>Pods-JiaoWuXiTong-ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ReactiveViewModel.xcscheme</key>
+		<key>Pods-JiaoWuXiTong-ReactiveViewModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-UIColor-Utilities.xcscheme</key>
+		<key>Pods-JiaoWuXiTong-UIColor-Utilities.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-libextobjc.xcscheme</key>
+		<key>Pods-JiaoWuXiTong-libextobjc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-libffi.xcscheme</key>
+		<key>Pods-JiaoWuXiTong-libffi.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-JiaoWuXiTong.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>1112FFA7FDBA443FA0610B7F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3ACE83EEB3814692BA71F55B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>43485A7EC39743AD87921D18</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>80B25242E4744B459FB38526</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A647AEEED6654BA5AF229646</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B4A8F79183644909B994AF29</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E1DE95C208104165A4C10538</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
