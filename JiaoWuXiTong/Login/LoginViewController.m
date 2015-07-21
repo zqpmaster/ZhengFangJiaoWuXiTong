@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *checkCodeText;
 @property (weak, nonatomic) IBOutlet UIImageView *checkCodeImageView;
 @property (strong, nonatomic) AFHTTPRequestOperationManager *AFHROM;
+@property (strong, nonatomic) NSDictionary *cookieDictionary;
+
 @property (weak, nonatomic) IBOutlet UITextView *text;
 @property (copy,nonatomic) NSString *viewState;
 @property (weak, nonatomic) IBOutlet UIButton *refreshBtn;
@@ -124,10 +126,10 @@
     NSMutableURLRequest *UrlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: @"http://172.21.96.64/CheckCode.aspx"]];
     //提交Cookie，上一行的NSURLRequest被改为NSMutableURLRequest
     
-    if(self.AFHROM.cookieDictionary) {
+    if(self.cookieDictionary) {
         [UrlRequest setHTTPShouldHandleCookies:NO];
         
-        [UrlRequest setAllHTTPHeaderFields:self.AFHROM.cookieDictionary];
+        [UrlRequest setAllHTTPHeaderFields:self.cookieDictionary];
     }
     
     //end
