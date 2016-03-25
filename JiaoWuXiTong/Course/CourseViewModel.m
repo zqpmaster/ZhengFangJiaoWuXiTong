@@ -10,6 +10,8 @@
 #import "UserInfoManager.h"
 #import "TFHpple.h"
 #import "CalDataModel.h"
+#import "AFNetworking.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface CourseViewModel()
 @property (strong, nonatomic) NSArray *allClasses;

@@ -12,6 +12,8 @@
 #import "TFHpple.h"
 #import "JiaoWuAppDelegate.h"
 #import "UserInfoManager.h"
+#import "AFNetworking.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *numberText;

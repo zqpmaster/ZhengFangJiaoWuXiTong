@@ -12,6 +12,7 @@
 #import "CalDataModel.h"
 #import "JiaoWuAppDelegate.h"
 #import "CourseViewModel.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface KeBiaoViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *keBiao;

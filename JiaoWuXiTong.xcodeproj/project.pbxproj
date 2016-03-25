@@ -33,6 +33,8 @@
 		27E7AA6119C2EAA400E037AD /* DataModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA5719C2EAA400E037AD /* DataModelController.m */; };
 		27E7AA6219C2EAA400E037AD /* FenShuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA5919C2EAA400E037AD /* FenShuViewController.m */; };
 		27E7AA6819C2EFE200E037AD /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA6719C2EFE200E037AD /* UserInfoManager.m */; };
+		FC582FDF1CA57FE500BBE1D9 /* Pods-JiaoWuXiTong.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C7F1D303A66E43E8C1AAE3AE /* Pods-JiaoWuXiTong.debug.xcconfig */; };
+		FC582FE01CA57FE700BBE1D9 /* Pods-JiaoWuXiTong.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = AF2B9A3F3E2294997A149218 /* Pods-JiaoWuXiTong.release.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -338,6 +340,8 @@
 			files = (
 				2795DD7E18A51FAA00F0ADD0 /* Images.xcassets in Resources */,
 				2795DD7018A51FAA00F0ADD0 /* InfoPlist.strings in Resources */,
+				FC582FE01CA57FE700BBE1D9 /* Pods-JiaoWuXiTong.release.xcconfig in Resources */,
+				FC582FDF1CA57FE500BBE1D9 /* Pods-JiaoWuXiTong.debug.xcconfig in Resources */,
 				2795DD7918A51FAA00F0ADD0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,7 +474,6 @@
 		2795DD9218A51FAA00F0ADD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -500,11 +503,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"${SDKROOT}/usr/include/libxml2",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -513,7 +512,6 @@
 		2795DD9318A51FAA00F0ADD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -536,11 +534,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"${SDKROOT}/usr/include/libxml2",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -554,9 +548,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JiaoWuXiTong/JiaoWuXiTong-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "JiaoWuXiTong/JiaoWuXiTong-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JiaoWuXiTong.zz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -569,12 +562,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yang liu (274AR9H38U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JiaoWuXiTong/JiaoWuXiTong-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "JiaoWuXiTong/JiaoWuXiTong-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JiaoWuXiTong.zz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -585,11 +577,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JiaoWuXiTong.app/JiaoWuXiTong";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JiaoWuXiTong/JiaoWuXiTong-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -608,11 +595,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JiaoWuXiTong.app/JiaoWuXiTong";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JiaoWuXiTong/JiaoWuXiTong-Prefix.pch";
 				INFOPLIST_FILE = "JiaoWuXiTongTests/JiaoWuXiTongTests-Info.plist";

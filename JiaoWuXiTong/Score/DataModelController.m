@@ -10,6 +10,7 @@
 #import "DataModel.h"
 #import "TFHpple.h"
 #import "UserInfoManager.h"
+#import "AFNetworking.h"
 
 @interface DataModelController ()
 @property(nonatomic,strong)NSString *viewState;
