@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1340C60AC8B1CCCB130A4C33 /* libPods-JiaoWuXiTong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EFB50E0B68BA553A73C16FD /* libPods-JiaoWuXiTong.a */; };
+		008E8F0531050C12BDECF24D /* libPods-JiaoWuXiTong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FA109AA52BC8F50EC281F8 /* libPods-JiaoWuXiTong.a */; };
 		2795DD6618A51FAA00F0ADD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2795DD6518A51FAA00F0ADD0 /* Foundation.framework */; };
 		2795DD6818A51FAA00F0ADD0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2795DD6718A51FAA00F0ADD0 /* CoreGraphics.framework */; };
 		2795DD6A18A51FAA00F0ADD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2795DD6918A51FAA00F0ADD0 /* UIKit.framework */; };
@@ -33,7 +33,6 @@
 		27E7AA6119C2EAA400E037AD /* DataModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA5719C2EAA400E037AD /* DataModelController.m */; };
 		27E7AA6219C2EAA400E037AD /* FenShuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA5919C2EAA400E037AD /* FenShuViewController.m */; };
 		27E7AA6819C2EFE200E037AD /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7AA6719C2EFE200E037AD /* UserInfoManager.m */; };
-		E05B4511AE5B449BA6D1FEF4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB238E8E11348D0886AA18C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,10 +87,9 @@
 		27E7AA5919C2EAA400E037AD /* FenShuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FenShuViewController.m; sourceTree = "<group>"; };
 		27E7AA6619C2EFE200E037AD /* UserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
 		27E7AA6719C2EFE200E037AD /* UserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
-		5BA302D684CA5376EE4AD4EB /* Pods-JiaoWuXiTong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaoWuXiTong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JiaoWuXiTong/Pods-JiaoWuXiTong.debug.xcconfig"; sourceTree = "<group>"; };
-		5EFB50E0B68BA553A73C16FD /* libPods-JiaoWuXiTong.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiaoWuXiTong.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DB238E8E11348D0886AA18C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE8BD1A9A997B365C6AF0EF1 /* Pods-JiaoWuXiTong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaoWuXiTong.release.xcconfig"; path = "Pods/Target Support Files/Pods-JiaoWuXiTong/Pods-JiaoWuXiTong.release.xcconfig"; sourceTree = "<group>"; };
+		A4FA109AA52BC8F50EC281F8 /* libPods-JiaoWuXiTong.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiaoWuXiTong.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF2B9A3F3E2294997A149218 /* Pods-JiaoWuXiTong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaoWuXiTong.release.xcconfig"; path = "Pods/Target Support Files/Pods-JiaoWuXiTong/Pods-JiaoWuXiTong.release.xcconfig"; sourceTree = "<group>"; };
+		C7F1D303A66E43E8C1AAE3AE /* Pods-JiaoWuXiTong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaoWuXiTong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JiaoWuXiTong/Pods-JiaoWuXiTong.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +101,7 @@
 				2795DD6818A51FAA00F0ADD0 /* CoreGraphics.framework in Frameworks */,
 				2795DD6A18A51FAA00F0ADD0 /* UIKit.framework in Frameworks */,
 				2795DD6618A51FAA00F0ADD0 /* Foundation.framework in Frameworks */,
-				E05B4511AE5B449BA6D1FEF4 /* libPods.a in Frameworks */,
-				1340C60AC8B1CCCB130A4C33 /* libPods-JiaoWuXiTong.a in Frameworks */,
+				008E8F0531050C12BDECF24D /* libPods-JiaoWuXiTong.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +125,7 @@
 				2795DD8A18A51FAA00F0ADD0 /* JiaoWuXiTongTests */,
 				2795DD6418A51FAA00F0ADD0 /* Frameworks */,
 				2795DD6318A51FAA00F0ADD0 /* Products */,
-				C2D9754C899FCA59D6F68EF1 /* Pods */,
+				F98DDA84870C24A67C0DB050 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,8 +147,7 @@
 				2795DD6718A51FAA00F0ADD0 /* CoreGraphics.framework */,
 				2795DD6918A51FAA00F0ADD0 /* UIKit.framework */,
 				2795DD8418A51FAA00F0ADD0 /* XCTest.framework */,
-				8DB238E8E11348D0886AA18C /* libPods.a */,
-				5EFB50E0B68BA553A73C16FD /* libPods-JiaoWuXiTong.a */,
+				A4FA109AA52BC8F50EC281F8 /* libPods-JiaoWuXiTong.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -251,11 +247,11 @@
 			path = Score;
 			sourceTree = "<group>";
 		};
-		C2D9754C899FCA59D6F68EF1 /* Pods */ = {
+		F98DDA84870C24A67C0DB050 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5BA302D684CA5376EE4AD4EB /* Pods-JiaoWuXiTong.debug.xcconfig */,
-				AE8BD1A9A997B365C6AF0EF1 /* Pods-JiaoWuXiTong.release.xcconfig */,
+				C7F1D303A66E43E8C1AAE3AE /* Pods-JiaoWuXiTong.debug.xcconfig */,
+				AF2B9A3F3E2294997A149218 /* Pods-JiaoWuXiTong.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -267,11 +263,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2795DD9418A51FAA00F0ADD0 /* Build configuration list for PBXNativeTarget "JiaoWuXiTong" */;
 			buildPhases = (
-				A9612DACF271425C9BFE50D1 /* Check Pods Manifest.lock */,
+				6183A548F1C9AF110E04DF4D /* Check Pods Manifest.lock */,
 				2795DD5E18A51FAA00F0ADD0 /* Sources */,
 				2795DD5F18A51FAA00F0ADD0 /* Frameworks */,
 				2795DD6018A51FAA00F0ADD0 /* Resources */,
-				E0EE730519464336BDA673BA /* Copy Pods Resources */,
+				CCA1F808A8CCD94AB9875A16 /* Embed Pods Frameworks */,
+				2A05B16B039609617572AAAA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -356,7 +353,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A9612DACF271425C9BFE50D1 /* Check Pods Manifest.lock */ = {
+		2A05B16B039609617572AAAA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JiaoWuXiTong/Pods-JiaoWuXiTong-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6183A548F1C9AF110E04DF4D /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -371,19 +383,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E0EE730519464336BDA673BA /* Copy Pods Resources */ = {
+		CCA1F808A8CCD94AB9875A16 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JiaoWuXiTong/Pods-JiaoWuXiTong-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JiaoWuXiTong/Pods-JiaoWuXiTong-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -490,7 +502,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"${SDKROOT}/usr/include/libxml2",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -527,7 +538,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"${SDKROOT}/usr/include/libxml2",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -538,24 +548,16 @@
 		};
 		2795DD9518A51FAA00F0ADD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BA302D684CA5376EE4AD4EB /* Pods-JiaoWuXiTong.debug.xcconfig */;
+			baseConfigurationReference = C7F1D303A66E43E8C1AAE3AE /* Pods-JiaoWuXiTong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JiaoWuXiTong/JiaoWuXiTong-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers\"",
-					"\"${PODS_ROOT}/Headers/AFNetworking\"",
-					"\"${PODS_ROOT}/Headers/ReactiveCocoa\"",
-					"\"${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa\"",
-					"\"${PODS_ROOT}/Headers/ReactiveViewModel\"",
-					"\"${PODS_ROOT}/Headers/UIColor-Utilities\"",
-					"${SDKROOT}/usr/include/libxml2",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "JiaoWuXiTong/JiaoWuXiTong-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ZQP.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JiaoWuXiTong.zz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -563,25 +565,17 @@
 		};
 		2795DD9618A51FAA00F0ADD0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE8BD1A9A997B365C6AF0EF1 /* Pods-JiaoWuXiTong.release.xcconfig */;
+			baseConfigurationReference = AF2B9A3F3E2294997A149218 /* Pods-JiaoWuXiTong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yang liu (274AR9H38U)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JiaoWuXiTong/JiaoWuXiTong-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers\"",
-					"\"${PODS_ROOT}/Headers/AFNetworking\"",
-					"\"${PODS_ROOT}/Headers/ReactiveCocoa\"",
-					"\"${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa\"",
-					"\"${PODS_ROOT}/Headers/ReactiveViewModel\"",
-					"\"${PODS_ROOT}/Headers/UIColor-Utilities\"",
-					"${SDKROOT}/usr/include/libxml2",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "JiaoWuXiTong/JiaoWuXiTong-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ZQP.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JiaoWuXiTong.zz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
